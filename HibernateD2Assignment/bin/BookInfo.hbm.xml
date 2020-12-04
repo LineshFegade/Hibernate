@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM "hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+	<class name="BookInfo" table="hibooks">
+        <id name="bookCode">
+            <column name="bookCode" /> 	
+            <generator class="sequence">
+            <param name="sequence">my</param>
+            <param name="parameters"> START WITH 100 INCREMENT BY 3</param>
+            </generator>	
+        </id>
+        <property name="bookTitle">
+            <column name="bookTitle" length="20" />
+        </property>
+        <property name="bookAuthor" >
+            <column name="bookAuthor"/>
+        </property> 
+        <property name="bookPublishDate" >
+            <column name="bookPublishDate"/>
+        </property>   
+</class>
+</hibernate-mapping>
